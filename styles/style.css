@@ -1,0 +1,321 @@
+/* FONTES - Google Fonts */
+/* As fontes precisam estar importadas aqui no topo, antes das alterações de CSS. Caso contrário
+elas não funcionarão */
+ @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* VARIÁVEIS EM CSS */
+
+:root{
+    --cor-primaria: #1A120B;
+    --cor-secundaria: #E5E5CB;
+    --cor-terciaria: #D5CEA3;
+    --cor-hover: #3C2A21;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+
+/* O asterísco é um seletor universal, selecionando todos os elementos do nosso arquivo HTML */ 
+* {
+    /* Aqui nós fazemos o Reset CSS, isso apagará toda pré estilização que já vem como padrão do HTML */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh; /* esse atributo VH(viewport height) significa que ele ocupará 100% da tela do dispositivo utilizado */
+    box-sizing: border-box; /* esse atributo faz com que o elemento filho na pule para fora do elemento pai(exemplo url: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+p {
+    color: white;
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao {
+    padding: 8% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4%;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 40px; está em comentário pois eu fiz os espaçamentos de forma individual. Mas com o gap fica muito mais fácil */
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;/* Unidade de medida rem é utilizada para difinir o tamanho de fonte, para que sua página tenha acesso a responsividade */
+    font-weight: 400;
+    font-family: var(--fonte-primaria)
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    margin-top: 40px;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+   
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    border:2px solid var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    width: 50%;
+    padding: 21.5px 0; /*  */
+    border-radius: 8px;
+    text-decoration: none;
+   
+}
+
+.apresentacao__links__link:hover{
+    background-color: var(--cor-hover);
+    border: solid 2px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape{
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.cabecalho{
+    padding: 2% 0 0 8%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+
+/* PÁGINA EXTRA DESAFIO ALURA - CURRICULO */
+
+.curriculo{
+    display: flex;
+    padding: 9%;
+    gap: 4%;
+}
+
+.curriculo__container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.curriculo__titulo{
+    margin: 5% 0 0 8%;
+    border: solid var(--cor-terciaria);
+    border-radius: 10px;
+    padding: 2%;
+    
+}
+
+.curriculo__titulo:hover{
+    padding: 3%;
+    border: solid white;
+    background-color: var(--cor-hover);
+}
+
+.curriculo__titulo h1{
+    color: var(--cor-terciaria);
+    font-size: 1.875rem;
+    font-family: var(--fonte-primaria); 
+    
+}
+
+.curriculo__titulo p{
+    font-family: var(--fonte-primaria);
+    margin: 1%;
+    
+}
+
+.curriculo__subtitulos{
+    margin: 5% 0 0 8%;
+    border: solid var(--cor-terciaria);
+    border-radius: 10px;
+    padding: 2%;
+    font-family: var(--fonte-primaria);
+}
+
+.curriculo__subtitulos:hover{
+    padding: 5%;
+    border: solid white;
+    background-color: var(--cor-hover);
+}
+
+.curriculo__subtitulos h2{
+    margin: 3%;
+    color: var(--cor-terciaria);
+}
+
+.curriculo__subtitulos p, a, li{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.curriculo__subtitulos a{
+    color: var(--cor-terciaria);
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 3% 0 3%;
+    height: 100%;
+    width: 100%;
+}
+
+.rodape__curriculo{
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-top: 10%;
+}
+
+/* Aqui começamos a ver sobre RESPONSIVIDADE - 
+
+O @media(media querie) nos ajuda a alterarmos as propriedades CSS de acordo com as condições que escolhermos.
+Por exemplo nesse projeto, quando a largura da tela atinge 941px o seu layout fica totalmente quebrado.
+Então utilizaremos o media querie para alterar o layout quando a largura bater 1000px.  */
+
+@media (max-width: 1000px) {
+
+    .cabecalho{
+      padding: 10% 0 0 0;  
+    }
+
+    .cabecalho__menu{
+        justify-content: center; /* Como o display:flex já está declarado na classe lá em cima, nao é necessario repeti-lo aqui */
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        gap: 10%;
+        padding: 5%;
+        
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+        margin-top: 7%;
+    }
+
+
+
+
+    .curriculo{
+        flex-direction: column-reverse;
+    }
+
+    .curriculo__titulo{
+        margin: 1%;
+        margin-top: 9%;
+    }
+
+    .curriculo__subtitulos{
+        margin: 1%;
+    }
+}
+
+/* Exercício de fixação: Crie a responsividade para smartphones. (max-width: 500px) -- FEITO! */
+@media (max-width: 500px) {
+
+    .cabecalho{
+      padding: 10% 0 0 0;  
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+
+    }
+
+    .cabecalho__menu__link{
+        font-size: 1rem
+    }
+
+    .apresentacao{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao__conteudo__titulo{
+        font-size: 1.5rem;
+    }
+
+    .apresentacao__conteudo__texto{
+        font-size: 1rem;
+    }
+
+    .apresentacao__links__subtitulo{
+        font-size: 1rem;
+    }
+
+    .apresentacao__links__navegacao{
+        font-size: 0.8rem;
+        width: 70%;
+    }
+}
+
+/*
+.imagem:hover{
+    padding: 50px;
+    transition: 2s;
+}
+*/
+
